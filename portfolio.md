@@ -1,4 +1,4 @@
-![fire header](fire-header.png)
+![fire header](images/fire-header.png)
 
 # About Me
 
@@ -17,7 +17,7 @@ Hello, my name is Tyler and I am a **front end web developer** focusing on React
 
 ## Cancel Reminder
 
-![Cancel Reminder Screenshot](screenshot.png)
+![Cancel Reminder Screenshot](images/screenshot.png)
 
 **Cancel Reminder** is a web app that keeps track of services you are subscribed to, such as
 Netflix or Hulu. It will remind you when to cancel your subscription before you are charged
@@ -32,7 +32,7 @@ Tech Used:
 
 ## Ham Exam Practice
 
-![Ham Exam Practice Screenshot](amateur-radio.school.png)
+![Ham Exam Practice Screenshot](images/amateur-radio.school.png)
 
 The purpose of this project is to create a website that allows you to practice for the amateur radio exams. Using this site you can take an exam that is made up of the same question pools that are provided by the FCC for the real exams. You can practice the Technician, General and Amateur Extra exams.
 
