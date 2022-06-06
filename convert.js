@@ -1,13 +1,24 @@
 const { exec } = require("child_process");
 
 const fs = require("fs/promises");
+const fsOld = require("fs");
 const showdown = require("showdown");
 const deployDirectory = "./dist";
 const stylesheetDirectory = "./styles";
 const imageDirectory = "./images";
 const outputFileName = "index.html";
 
+createHtml();
+
 async function createHtml() {
+  // clean dist up first or create it if it doesn't exist
+
+  if (fsOld.existsSync("./dist")) {
+    await cleanDist();
+  } else {
+    await createDist();
+  }
+
   const converter = new showdown.Converter();
   converter.setOption("noHeaderId", true);
 
@@ -31,6 +42,36 @@ async function loadTemplate(templateFileName) {
     encoding: "utf-8",
   });
   return templateData;
+}
+
+// DANGER!!!
+
+async function cleanDist() {
+  return new Promise((resolve, reject) => {
+    exec("rm -rf dist", (err) => {
+      if (!err) {
+        exec("mkdir dist", (err) => {
+          if (!err) {
+            resolve("Directory Cleaned");
+          }
+        });
+      } else {
+        reject("Error removing dist directory");
+      }
+    });
+  });
+}
+
+async function createDist() {
+  return new Promise((resolve, reject) => {
+    exec("mkdir dist", (err) => {
+      if (!err) {
+        resolve("Created dist directory");
+      } else {
+        reject("Error creating dist diretory");
+      }
+    });
+  });
 }
 
 async function copyImages() {
@@ -59,5 +100,3 @@ async function copyStylesheet() {
     );
   });
 }
-
-createHtml();
