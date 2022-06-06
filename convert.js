@@ -31,10 +31,16 @@ async function createHtml() {
 
   // the html string to write to the file
   const html = header + portfolioData + footer;
+  await writeIndex(html);
 
-  console.log(html);
   await copyStylesheet();
   await copyImages();
+
+  console.log("All done.");
+}
+
+async function writeIndex(indexHtml) {
+  return fs.writeFile(`${deployDirectory}/${outputFileName}`, indexHtml);
 }
 
 async function loadTemplate(templateFileName) {
