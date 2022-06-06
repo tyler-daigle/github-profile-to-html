@@ -1,3 +1,4 @@
+<i class="fire-header"></i>
 ![fire header](images/fire-header.png)
 
 # About Me
@@ -17,6 +18,7 @@ Hello, my name is Tyler and I am a **front end web developer** focusing on React
 
 ## Cancel Reminder
 
+<i></i>
 ![Cancel Reminder Screenshot](images/screenshot.png)
 
 **Cancel Reminder** is a web app that keeps track of services you are subscribed to, such as
@@ -32,18 +34,14 @@ Tech Used:
 
 ## Ham Exam Practice
 
+<i></i>
 ![Ham Exam Practice Screenshot](images/amateur-radio.school.png)
-
 The purpose of this project is to create a website that allows you to practice for the amateur radio exams. Using this site you can take an exam that is made up of the same question pools that are provided by the FCC for the real exams. You can practice the Technician, General and Amateur Extra exams.
-
 It was created with **React**. All of the questions are hosted on **Contentful**.
-
 The site is hosted at [amateur-radio.school](https://amateur-radio.school).
-
 The code is available on [Github](https://github.com/tyler-daigle/practice-ham).
 
 ---
 
 ![Some Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=tyler-daigle&theme=blue-green)
-
 ![Tyler's GitHub stats](https://github-readme-stats.vercel.app/api?username=tyler-daigle&theme=tokyonight)
